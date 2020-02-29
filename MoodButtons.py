@@ -1,4 +1,3 @@
-
 print('Enter a number to describe your mood:\n 1: Happy\n 2: Sad\n 3: Angry\n 4: Stressed')
 
 num = input()
