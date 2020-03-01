@@ -1,6 +1,8 @@
 from tkinter import *
+import tkinter as tk
 
 master = Tk()
+root = tk.Tk()
 
 
 def closewindow():
@@ -23,22 +25,20 @@ def stressed():
     print('Stressed')
 
 
-print('How are you feeling today?')
+label = tk.Label(root, text='Enter your current mood!')
+label.grid(row=0, column=1)
+label.pack()
 
+button1 = Button(master, text="Happy", command=happy)
+button1.grid(row=1, column=0)
 
-button1 = Button(master, text="Close Window", command=closewindow)
-button1.grid(row=7, column=1)
+button2 = Button(master, text="Sad", command=sad)
+button2.grid(row=1, column=2)
 
-button2 = Button(master, text="Happy", command=happy)
-button2.grid(row=0, column=0)
+button3 = Button(master, text="Angry", command=angry)
+button3.grid(row=3, column=0)
 
-button3 = Button(master, text="Sad", command=sad)
-button3.grid(row=0, column=2)
+button4 = Button(master, text="Stressed", command=stressed)
+button4.grid(row=3, column=2)
 
-button4 = Button(master, text="Angry", command=angry)
-button4.grid(row=2, column=0)
-
-button5 = Button(master, text="Stressed", command=stressed)
-button5.grid(row=2, column=2)
-
-mainloop()
+root.mainloop()
